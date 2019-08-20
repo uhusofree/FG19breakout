@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cc0b648c4d56d04e95b5f0182662394, type: 3}
-  m_Name: PrefabBrush
+  m_Name: NormalBrick
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5252464049578076635, guid: 9dc043cd0a3ecbb4caa554f67630503e, type: 3}
   zPosition: 0
