@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4967541352878799387}
   - component: {fileID: 1657993913936823871}
-  - component: {fileID: 4879319515221120105}
   - component: {fileID: 6991729233290626592}
-  - component: {fileID: 2730494181439956149}
+  - component: {fileID: -7477632362326816811}
   m_Layer: 0
   m_Name: NormalBrick
   m_TagString: Untagged
@@ -83,32 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4879319515221120105
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7042780937179953281}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &6991729233290626592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,8 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   causeCameraShake: 1
   isBreakable: 1
-  sprites: []
---- !u!61 &2730494181439956149
+  sprites:
+  - {fileID: 21300000, guid: 20b379393dacca7408b16fe3d2ad6720, type: 3}
+  - {fileID: 21300000, guid: 4703f6d44d67dbe4eb752f94d1a081cb, type: 3}
+--- !u!61 &-7477632362326816811
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,12 +116,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0

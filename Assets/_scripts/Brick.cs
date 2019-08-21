@@ -14,6 +14,7 @@ public class Brick : MonoBehaviour
     public List<Sprite> sprites;
 
     private SpriteRenderer spriteRenderer;
+    public static int bricksDestroyed = 0;
 
     private void Awake()
     {
@@ -24,13 +25,14 @@ public class Brick : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
 
     {
-        if(causeCameraShake)
+
+        if (causeCameraShake)
         {
-            //Todo create camera shake
+            
             GameCamera.instance.cameraShake.Shake();
         }
 
-        if(!isBreakable)
+        if (!isBreakable)
         {
             return;
         }
@@ -38,12 +40,17 @@ public class Brick : MonoBehaviour
         if (sprites.Count > 0)
         {
             sprites.RemoveAt(0);
-            if (sprites.Count> 0)
+            if (sprites.Count > 0)
             {
                 spriteRenderer.sprite = sprites[0];
             }
             else
             {
+                bricksDestroyed++;
+                if (bricksDestroyed % GameMode.instance.spawnBallForEveryBrickDestroy == 0)
+                {
+                    Instantiate(GameMode.instance.ballprefab, transform.position, Quaternion.identity);
+                }
                 Destroy(this.gameObject);
             }
         }
